@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS happiness;
+DROP TABLE IF EXISTS lockdown;
