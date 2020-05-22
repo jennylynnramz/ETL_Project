@@ -2,7 +2,8 @@ DROP TABLE IF EXISTS happiness;
 DROP TABLE IF EXISTS lockdown;
 
 CREATE TABLE happiness (
-	country_name VARCHAR PRIMARY KEY,
+	index int PRIMARY KEY,
+	country_name VARCHAR,
 	regional_indicator VARCHAR,
 	logged_gdp_per_capita FLOAT,
 	social_support FLOAT,
@@ -15,7 +16,8 @@ CREATE TABLE happiness (
 SELECT * FROM happiness;
 
 CREATE TABLE lockdown (
-	country VARCHAR PRIMARY KEY,
+	index int PRIMARY KEY,
+	country VARCHAR,
 	province VARCHAR,
 	date DATE,
 	type VARCHAR	
