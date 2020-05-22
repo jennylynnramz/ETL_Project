@@ -1,7 +1,11 @@
 DROP TABLE IF EXISTS happiness;
 DROP TABLE IF EXISTS lockdown;
 
+DELETE FROM happiness;
+DELETE FROM lockdown;
+
 CREATE TABLE happiness (
+-- 	index int PRIMARY KEY,
 	country_name VARCHAR PRIMARY KEY,
 	regional_indicator VARCHAR,
 	logged_gdp_per_capita FLOAT,
@@ -15,10 +19,17 @@ CREATE TABLE happiness (
 SELECT * FROM happiness;
 
 CREATE TABLE lockdown (
-	country VARCHAR PRIMARY KEY,
+-- 	index int PRIMARY KEY,	
+	country VARCHAR,
 	province VARCHAR,
 	date DATE,
-	type VARCHAR	
+	type VARCHAR,
+	PRIMARY KEY(country, province)
 );
 
-SELECT * FROM lockdown
+SELECT * FROM lockdown;
+
+SELECT DISTINCT type FROM lockdown;
+
+
+
