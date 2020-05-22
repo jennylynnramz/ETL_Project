@@ -5,8 +5,13 @@ DELETE FROM happiness;
 DELETE FROM lockdown;
 
 CREATE TABLE happiness (
+<<<<<<< HEAD
 -- 	index int PRIMARY KEY,
 	country_name VARCHAR PRIMARY KEY,
+=======
+	index int PRIMARY KEY,
+	country_name VARCHAR,
+>>>>>>> f46c12e876e2f5336eb8fae0bb3f8485f62cf6a4
 	regional_indicator VARCHAR,
 	logged_gdp_per_capita FLOAT,
 	social_support FLOAT,
@@ -19,7 +24,11 @@ CREATE TABLE happiness (
 SELECT * FROM happiness;
 
 CREATE TABLE lockdown (
+<<<<<<< HEAD
 -- 	index int PRIMARY KEY,	
+=======
+	index int PRIMARY KEY,
+>>>>>>> f46c12e876e2f5336eb8fae0bb3f8485f62cf6a4
 	country VARCHAR,
 	province VARCHAR,
 	date DATE,
